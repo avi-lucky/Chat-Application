@@ -1,7 +1,4 @@
-// loginUser
 function logIn() {
-    console.log(document.getElementById("name").value)
-    
+    localStorage.setItem("name", document.getElementById("name").value)
+    location.replace("/home/celticlab/Desktop/Chat-App/public/index.html")
 }
-
-logIn()
