@@ -63,7 +63,7 @@
   
   .friend-list {
     padding: 10px 15px;
-    display: flex;
+    /* display: inline; */
     vertical-align: baseline;
     background: #fff;
     transition: 0.3s ease;
@@ -74,18 +74,19 @@
     width: 70%;
   }
   
-  .friend-list .text h6 {
-    margin-top: 6px;
+  .friend-list .text h4 {
+    margin-top: 5px;
     margin-bottom: 0;
   }
 
-  .h6, h6 {
-    font-size: 1rem;
+  .h4, h4 {
+    font-size: 2rem;
     margin-bottom: .5rem;
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
     color: inherit;
+    /* display: inline; */
   }
   
   p {
