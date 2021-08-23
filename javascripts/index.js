@@ -6,8 +6,7 @@ console.log(list)
 for (i=0; i< friends.length;  i++)
 {
     console.log(friends[i])
-    list += `<div class="row-8" id="${i}"></div>`
-    list += `<h4>${friends[i]}</h4>`
+    list += `<div class="card" id="${i}"><h4>${friends[i]}</h4></div>`
 }   
 
 document.getElementById('friends').innerHTML = list
