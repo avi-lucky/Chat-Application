@@ -86,7 +86,6 @@ img {
   font-weight: 500;
   line-height: 1.2;
   color: inherit;
-  /* display: flex; */
 }
 
 .card {
@@ -129,23 +128,24 @@ hr {
   max-width: 33.333333%;
 }
 
-.friend-name {
-  padding: 10px 15px;
-  display: flex;
+.settings-tray {
+  margin-top: -30px;
+  padding:initial;
   vertical-align: baseline;
-  background: #fff;
+  background-color: #ccc;
+  border-radius: 4px;
   transition: 0.3s ease;
 }
 
-.friend-name .text {
+/* .settings-tray .text {
   margin-left: 12px;
   width: 70%;
 }
 
-.friend-name .text h6 {
+.settings-tray .text h2 {
   margin-top: 6px;
   margin-bottom: 0;
-}
+} */
 
 .chat-bubble {
   padding: 10px 14px;
@@ -187,6 +187,7 @@ div {
   border-right: 0;
   margin-right: -20px;
 }
+
 .chat-bubble:after {
   content: "";
   position: absolute;

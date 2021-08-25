@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -30,7 +31,7 @@
 
     <div class="column left" style="background-color:rgb(235, 235, 235);height: 700px;">
         <div class="header"
-            style="font-size:20px;margin-top: 5px;background: rgb(177, 177, 177);padding: 10px 15px;border-radius: 7px;">
+            style="font-size:20px;margin-top: 5px;background: #ccc;padding: 10px 15px;border-radius: 7px;">
             <h2>
                 Friends</h2>
             <a style="font-size:24px;margin-top: -35px;float: right;"
@@ -45,20 +46,28 @@
             <!-- </div> -->
             <!-- </div> -->
         </div>
+        <div class="row-8">
+            <button class="demo" id="current" onclick="openLink(event, 'Fade')">
+                <h4>Himanshu</h4>
+            </button>
+            <br>
+            <button class="demo" id="current" onclick="openLink(event, 'luck')">
+                <h4>Lucky</h4>
+            </button>
+        </div>
     </div>
 
     <div class="column right" style="background-color:rgb(255, 255, 255);">
         <div class="settings-tray">
-            <div class="friend-name">
-                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg"
-                    alt="">
-                <div class="text">
-                    <h6>Robo Cop</h6>
-                    <p class="text-muted">Last Online 01:35</p>
-                </div>
+            <div id="Fade" class="fadeIn">
+                <h2>Himanshu</h2>
             </div>
+            <div id="luck" class="fadeIn">
+                <h2>Lucky</h2>
+            </div>
+            <!-- <h3>Robo Cop</h3> -->
         </div>
-        <div class="col-12" style="height: 640px;overflow:auto;">
+        <div class="col-12" style="height: 590px;overflow:auto;">
             <div class="chat-panel">
                 <div class="row no-gutters">
                     <div class="col-md-3">
