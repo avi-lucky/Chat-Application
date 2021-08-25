@@ -95,6 +95,15 @@ img {
   text-align: initial;
 }
 
+.demo {
+  border: none;
+  margin: 3px;
+  background-color: #fff;
+  padding:0px 0px 0px 0px;
+  border-radius: 5px;
+  text-align: initial;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -149,11 +158,15 @@ hr {
 
 .chat-bubble {
   padding: 10px 14px;
-  background: #eee;
+  background: #ddd;
   margin: 10px 30px;
   border-radius: 9px;
   position: relative;
   animation: fadeIn 1s ease-in;
+}
+
+.chat-panel {
+  background-color:  #eee;
 }
 
 div {
