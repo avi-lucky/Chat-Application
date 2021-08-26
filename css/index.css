@@ -22,7 +22,8 @@
   display: table;
   clear: both;
 }
-.search-box {
+
+/* .search-box {
   background: #c0c0c0;
   padding: 10px 13px;
 }
@@ -36,7 +37,7 @@
   color: grey;
   margin-left: 2px;
   vertical-align: middle;
-}
+} */
 
 input {
   border: none;
@@ -89,6 +90,8 @@ img {
 }
 
 .card {
+  margin: 3px;
+  border: none;
   background-color: #fff;
   padding:0px 0px 0px 0px;
   border-radius: 5px;
@@ -131,11 +134,11 @@ hr {
   border-right: 1px solid #dee2e6 !important;
 }
 
-.col-md-4 {
+/* .col-md-4 {
   -ms-flex: 0 0 33.333333%;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
-}
+} */
 
 .settings-tray {
   margin-top: -30px;
