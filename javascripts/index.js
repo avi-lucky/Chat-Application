@@ -6,8 +6,12 @@ console.log(list)
 for (i=0; i< friends.length; i++)
 {
     console.log(friends[i])
-    list += `<button class="card" id="${i}" onclick="openClick(event)"><h4>${friends[i]}</h4></button><br>`
+    list += `<div class=row-8> 
+    <button class="card" id="${i}" onclick="openClick(event)"  value="${friends[i]}">${friends[i]}</button><br>
+    </div>`
 }
+document.getElementById('chatTitle').innerHTML = friends[0]
+document.getElementById('friends').innerHTML = list
 
 // function openLink(e, info) {    
 //     var i, content, links;
@@ -23,33 +27,46 @@ for (i=0; i< friends.length; i++)
 //     e.currentTarget.className += " active";
 //     console.log(e)
 //     }
-    // document.getElementById("current").click();
+//     document.getElementById("current").click();
 
 function openClick(e) {
-    var i, cards;
-    cards = document.getElementsByClassName("card");
-    console.log(document.getElementsByClassName("card"))
+    // var i, table, cards;
+    // table = document.getElementsByClassName("chatTable");
+    // console.log(e.currentTarget.getAttribute('value'))
+    // for (i = 0; i < table.length; i++) {
+    //     table[i].style.display = "none";
+    // }
+    var cards = document.getElementsByClassName("card");
+    // console.log(document.getElementsByClassName("card"))
     for (i = 0; i < cards.length; i++) {
             cards[i].className = cards[i].className.replace(" active", "");
         }
-        e.currentTarget.className += " active";
-}      
-document.getElementById('friends').innerHTML = list
+        // document.getElementById(user).style.display = "block";
+    e.currentTarget.className += " active";
+        // console.log(e)
+    document.getElementById('chatTitle').innerHTML = e.currentTarget.getAttribute('value')
 
-var chat = JSON.parse(localStorage.getItem('chat'))
-var list = ''
-console.log(list)
-
-for (i=0; i< chat.length; i++)
-{
-    console.log(chat[i])
-    list += `<div class="chats" id="${i}"><h2>${chat[i]}</h2></div>`
 }
+// document.getElementById("friends").click();      
 
-var chat = [["Himanshu","Hi",1212443],["Avikal", "Hello", 1223435],["Himanshu", "How are you", 1324355],["Avikal", "I am good.", 1243545]]
+// var aayush = JSON.parse(localStorage.getItem('Aayush Pandey'))
+// console.log(aayush)
 
-friends.push(document.getElementById("chat").value)
+// var list = ''
+// console.log(list)
 
-localStorage.setItem("chat", JSON.stringify(chat))
+// for (i=0; i < aayush.length; i++)
+// {
+//     console.log(aayush[i])
+//     list += `<div class="chats" id="${i}"><h4>${aayush[i]}</h4></div>`
+// }
 
-document.getElementById('chat').innerHTML = list
+var Aayush = [["Aayush Pandey","Hii",1212443],["Avikal Shukla", "Hello", 1223435],["Aayush Pandey", "How are you", 1324355],["Avikal Shukla", "I am good.", 1243545]]
+    
+var Aryan = [["Aryan Gupta","Hey",1212443],["Avikal Shukla", "Hii", 1223435],["Aryan Gupta", "How are you", 1324355],["Avikal Shukla", "I am fine.", 1243545]]
+
+localStorage.setItem("Aayush Pandey", JSON.stringify(Aayush))
+localStorage.setItem("Aryan Gupta", JSON.stringify(Aryan))
+
+// document.getElementById('Aayush Pandey').innerHTML = list
+// console.log(list)
