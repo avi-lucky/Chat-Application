@@ -62,7 +62,7 @@ img {
   border-radius: 40px;
 }
 
-.friend-list {
+/* .friend-list {
   padding: 10px 15px;
   display: inline;
   vertical-align: baseline;
@@ -78,7 +78,7 @@ img {
 .friend-list .text h4 {
   margin-top: 5px;
   margin-bottom: 0;
-}
+} */
 
 .h4, h4 {
   font-size: 2rem;
@@ -90,6 +90,7 @@ img {
 }
 
 .card {
+  font-size: 25px;
   margin: 3px;
   border: none;
   background-color: #fff;
@@ -141,12 +142,14 @@ hr {
 } */
 
 .settings-tray {
-  margin-top: -20px;
+  margin-top: -30px;
+  margin-left: -5px;
   padding:initial;
   vertical-align: baseline;
   background-color: #ccc;
   border-radius: 4px;
   transition: 0.3s ease;
+  margin-right: -15px;
 }
 
 /* .settings-tray .text {
@@ -162,7 +165,7 @@ hr {
 .chat-bubble {
   padding: 10px 14px;
   background: #ddd;
-  margin: 10px 30px;
+  margin: 10px 20px;
   border-radius: 9px;
   position: relative;
   animation: fadeIn 1s ease-in;
@@ -221,6 +224,7 @@ div {
 }
 
 .offset-md-9 {
+  background-color: #74b9ff;
   min-width: 7px;
   margin-left: 75%;
 }
@@ -254,12 +258,13 @@ div {
   background: rgb(230, 230, 230);
   position: fixed;
   display: flex;
-  width: 1125px;
+  width: 1150px;
   align-items: baseline;
   padding: 10px 15px;
   align-items: center;
   margin-top: 440px;
   bottom: 0;
+  margin-left: -5px;
 }
 
 .chat-box i {

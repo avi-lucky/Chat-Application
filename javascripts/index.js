@@ -16,22 +16,6 @@ for (i=0; i< friends.length; i++)
 document.getElementById('chatTitle').innerHTML = friends[0]
 document.getElementById('friends').innerHTML = list
 
-// function openLink(e, info) {    
-//     var i, content, links;
-//     content = document.getElementsByClassName("fadeIn");
-//     for (i = 0; i < content.length; i++) {  
-//     content[i].style.display = "none";
-//     }
-//     links = document.getElementsByClassName("demo");
-//     for (i = 0; i < links.length; i++) {
-//     links[i].className = links[i].className.replace(" active", "");
-//     }
-//     document.getElementById(info).style.display = "block";
-//     e.currentTarget.className += " active";
-//     console.log(e)
-//     }
-//     document.getElementById("current").click();
-
 chat(window[friends[0].split(" ").join("")])
 
 function openClick(e) {
@@ -39,14 +23,11 @@ function openClick(e) {
     for (i = 0; i < cards.length; i++) {
             cards[i].className = cards[i].className.replace(" active", "");
         }
-        // document.getElementById(user).style.display = "block";
     e.currentTarget.className += " active";
     document.getElementById('chatTitle').innerHTML = e.currentTarget.getAttribute('value')
     console.log(e.currentTarget.getAttribute('value').split(" ").join(""))
     chat(window[e.currentTarget.getAttribute('value').split(" ").join("")])
-
 }
-// document.getElementById("friends").click();      
 
 function chat(name){
     var list = ''
@@ -54,8 +35,14 @@ function chat(name){
 
     for (i=0; i < name.length; i++)
     {
-        console.log(name[i])
-        list += `<div class="chats" id="${i}"><h4>${name[i][1]}</h4></div>`
+        console.log(name[i][0]==localStorage.getItem("name"))
+        if(name[i][0]==localStorage.getItem("name")){
+            list += `<div class="chats col-md-3 offset-md-9 chat-bubble chat-bubble--right" id="${i}"><h4>${name[i][1]}</h4></div>`
+        }
+        else{
+            list += `<div class="chats col-md-3 chat-bubble chat-bubble--left" id="${i}"><h4>${name[i][1]}</h4></div>`
+        }
+
     }
     document.getElementById("chatBody").innerHTML = list
 }
