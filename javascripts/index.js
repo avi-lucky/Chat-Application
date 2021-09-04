@@ -10,13 +10,16 @@ for (i=0; i< friends.length; i++)
 {
     console.log(friends[i])
     list += `<div class=row-8> 
-    <button class="card" id="${i}" onclick="openClick(event)"  value="${friends[i]}">${friends[i]}</button><br>
+    <button class="card" id="${i}" onclick="openClick(event)" value="${friends[i]}">${friends[i]}</button><br>
     </div>`
 }
 document.getElementById('chatTitle').innerHTML = friends[0]
 document.getElementById('friends').innerHTML = list
 
-chat(window[friends[0].split(" ").join("")])
+if(window[friends[0].split(" ").join("")] ==  null){
+    window[friends[0].split(" ").join("")] = []
+    chat(window[friends[0].split(" ").join("")])
+}
 
 function openClick(e) {
     var cards = document.getElementsByClassName("card");
@@ -47,11 +50,24 @@ function chat(name){
     document.getElementById("chatBody").innerHTML = list
 }
 
-var aayush = JSON.parse(localStorage.getItem('AayushPandey'))
+// var aayush = JSON.parse(localStorage.getItem('AayushPandey'))
 // console.log(aayush)
 
-localStorage.setItem("AayushPandey", JSON.stringify(AayushPandey))
-localStorage.setItem("AryanGupta", JSON.stringify(AryanGupta))
+// localStorage.setItem("AayushPandey", JSON.stringify(AayushPandey))
+// localStorage.setItem("AryanGupta", JSON.stringify(AryanGupta))
 
 
-// console.log(list)
+function chatUser(){
+    var  friendChat = 
+    console.log(friendChat)
+    var AayushPandey = JSON.parse(localStorage.getItem("AayushPandey"))
+    if(AayushPandey ==  null){
+        AayushPandey = []
+    }
+    AayushPandey.push(["Avikal Shukla", document.getElementById("inbox").value, Date.now()])
+    console.log("Avikal Shukla", document.getElementById("inbox").value, Date.now())
+    localStorage.setItem("AayushPandey", JSON.stringify(AayushPandey))
+    console.log(AayushPandey)
+    // location.replace("/home/celticlab/Desktop/Chat-App/public/index.html")
+}
+document.getElementById("inbox").innerHTML = AayushPandey

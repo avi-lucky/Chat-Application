@@ -46,7 +46,7 @@
         <div class="settings-tray">
             <div class="chatTable">
                 <div>
-                    <h2 id="chatTitle"></h2>
+                    <h2 id="chatTitle" style="background-color: #ccc; border-radius: 5px;"></h2>
                 </div>
                 <div class="col-12" style="height: 615px;">
                     <div class="chat-panel" id="chatBody">
@@ -105,9 +105,10 @@
         <div class="col-12">
             <div class="chat-box">
                 <span style="font-size:25px;">&#128512;</span>
-                <input type="text" placeholder="Type your message here...">
-                <i style="font-size:25px" class="glyphicon glyphicon-paperclip"></i>
-                <i style="font-size:25px" class="glyphicon glyphicon-send"></i>
+                <input type="text" id="inbox" placeholder="Type your message here...">
+                <button style="font-size:25px; border:none;" class="glyphicon glyphicon-paperclip"></button>
+                <button onclick="chatUser()" action="chatUser" type="submit" form="nameform" value="Submit"
+                    style="font-size:25px; border:none;" class="glyphicon glyphicon-send"></button>
             </div>
         </div>
     </div>

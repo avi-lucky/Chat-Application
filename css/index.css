@@ -146,7 +146,7 @@ hr {
   margin-left: -5px;
   padding:initial;
   vertical-align: baseline;
-  background-color: #ccc;
+  /* background-color: #ccc; */
   border-radius: 4px;
   transition: 0.3s ease;
   margin-right: -15px;
@@ -226,7 +226,7 @@ div {
 .offset-md-9 {
   background-color: #74b9ff;
   min-width: 7px;
-  margin-left: 75%;
+  margin-left: 72%;
 }
 
 .col-md-3 {
