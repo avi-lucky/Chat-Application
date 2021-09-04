@@ -15,11 +15,7 @@ for (i=0; i< friends.length; i++)
 }
 document.getElementById('chatTitle').innerHTML = friends[0]
 document.getElementById('friends').innerHTML = list
-
-if(window[friends[0].split(" ").join("")] ==  null){
-    window[friends[0].split(" ").join("")] = []
-    chat(window[friends[0].split(" ").join("")])
-}
+chat(window[friends[0].split(" ").join("")])
 
 function openClick(e) {
     var cards = document.getElementsByClassName("card");
@@ -45,29 +41,9 @@ function chat(name){
         else{
             list += `<div class="chats col-md-3 chat-bubble chat-bubble--left" id="${i}"><h4>${name[i][1]}</h4></div>`
         }
-
     }
     document.getElementById("chatBody").innerHTML = list
 }
 
-// var aayush = JSON.parse(localStorage.getItem('AayushPandey'))
-// console.log(aayush)
-
-// localStorage.setItem("AayushPandey", JSON.stringify(AayushPandey))
-// localStorage.setItem("AryanGupta", JSON.stringify(AryanGupta))
-
-
-function chatUser(){
-    var  friendChat = 
-    console.log(friendChat)
-    var AayushPandey = JSON.parse(localStorage.getItem("AayushPandey"))
-    if(AayushPandey ==  null){
-        AayushPandey = []
-    }
-    AayushPandey.push(["Avikal Shukla", document.getElementById("inbox").value, Date.now()])
-    console.log("Avikal Shukla", document.getElementById("inbox").value, Date.now())
-    localStorage.setItem("AayushPandey", JSON.stringify(AayushPandey))
-    console.log(AayushPandey)
-    // location.replace("/home/celticlab/Desktop/Chat-App/public/index.html")
-}
-document.getElementById("inbox").innerHTML = AayushPandey
+localStorage.setItem("AayushPandey", JSON.stringify(AayushPandey))
+localStorage.setItem("AryanGupta", JSON.stringify(AryanGupta))
